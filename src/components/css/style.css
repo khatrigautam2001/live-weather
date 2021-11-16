@@ -1,0 +1,99 @@
+*{
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    display: grid;
+    place-items: center;
+    height: 500px;
+    width: 25vw;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: #a5bbdd;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.input_data{
+    /* width: 30%;
+    height: 500px; */
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.input_field{
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: white;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+
+.wave.-two{
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important; 
+}
+
+.wave.-three{
+    animation: drift 5000ms infinite linear;
+    opacity: 0.2;
+    z-index: 2 !important; 
+}
+
+.info{
+    font-size: 20px;
+    color: black;
+    z-index: 100;
+}
+
+.fas{
+    animation: locIcon 3000ms infinite linear;
+}
+
+@keyframes drift {
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes locIcon {
+    from{
+        transform: translateX(10px);
+    }
+}
+
+@media (max-width:468px) {
+    .box{
+        margin-top: 100px;
+        width: 75vw;
+    }
+    
+}
